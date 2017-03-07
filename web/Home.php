@@ -24,28 +24,28 @@ class Home extends MY_Controller {
 	 }
 
 	public function index(){
-		$this->data['title'] = 'ImunoDB | Base de Dados Latino-Americana de Mutações Genéticas em Imunodeficiências Primárias';
+		// $this->data['title'] = 'ImunoDB | Base de Dados Latino-Americana de Mutações Genéticas em Imunodeficiências Primárias';
 		
 	//	$this->middle = 'home_view';
 	//	$this->layout();
 	}
 
 	public function links(){
-		$this->data['title'] = "ImunoDB | Links úteis";
+		// $this->data['title'] = "ImunoDB | Links úteis";
 
 	//	$this->middle = 'links_uteis';
 	//	$this->layout();
 	}
 
 	public function sobre (){
-		$this->data['title'] = "ImunoDB | Sobre a equipe";
+		// $this->data['title'] = "ImunoDB | Sobre a equipe";
 
 	//	$this->middle = 'sobre_equipe';
 	//	$this->layout();
 	}
 
 	public function contato(){
-		$this->data['title'] = "ImunoDB | Entre em contato conosco";
+		// $this->data['title'] = "ImunoDB | Entre em contato conosco";
 
 	//	$this->middle = 'contato_view';
 	//	$this->layout();

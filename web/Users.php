@@ -68,6 +68,7 @@ class Users extends MY_Controller {
     //     $this->layout();   
     // }
 
+    // Aqui envia email para o usuário
     function confirmation_mail($data, $url){
         // mandar email de confirmação do cadastro
         $this->email->from('imunodb@gmail.com', 'ImunoDB');
@@ -83,6 +84,7 @@ class Users extends MY_Controller {
         $this->email->send();
     }
 
+    // Essa função lida com o link que o usuário clicou no email, porém isso pode ir direto para o CI
     public function confirm(){
         $data = $this->input->get();
         
