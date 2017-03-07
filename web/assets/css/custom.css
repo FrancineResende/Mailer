@@ -1,0 +1,83 @@
+a:hover {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #1f76bA;
+}
+
+footer {
+    text-align:center;
+    color: #7C7C7C;
+}
+
+strong {
+    color:#1f76bA;
+}
+
+th {
+    text-align:center;
+    /*usar algum alinhamento vertical*/
+}
+
+.active {
+    background-color: #055da0;
+}
+
+#topnavbar {
+    margin: 0;
+}
+
+#topnavbar.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#banner {
+    width: 100%;
+    padding: 0 15% 0 15%;
+    background-color: #0067AF;
+}
+
+.affix {
+    top: 0;
+    width: 100%;
+}
+
+.affix + .container-fluid {
+    padding-top: 70px;
+}
+
+.navbar {
+    background-color:#1f76bA;
+    color: #fff
+}
+
+/*.navbar-brand:hover {color: #fff}*/
+
+.navbar-toggle {
+    background-color:#fff;
+}
+
+.sr-only, .icon-bar {
+    background-color: #1f76bA;
+}
+
+/*body {
+    padding-top: 50px;
+}
+*/
+
+.starter-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.tab, {
+    color: #1f76bA;
+}
+
+.tab:hover {
+    color: #bfbfbf;
+}
