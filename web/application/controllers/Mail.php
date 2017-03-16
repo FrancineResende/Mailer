@@ -26,7 +26,7 @@ class Mail extends CI_Controller {
 			
 			$url      = 'http://localhost/codeigniter/mail/confirm?';
 			$url	 .= sprintf('id=%s&email=%s&password=%s&datetime=%s',$id, $email, $password, $datetime);
-			
+			echo "Email que chega = ".$email."\n";
 			$nome     = $this->encryption->decrypt($nome);
 			$email    = $this->encryption->decrypt($email);
 			echo "Email = ".$email."\n";
