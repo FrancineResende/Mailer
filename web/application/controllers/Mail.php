@@ -25,7 +25,7 @@ class Mail extends CI_Controller {
 
 			$this->email->from('imunodb@gmail.com', 'ImunoDB');
 	        $this->email->reply_to('imunodb@gmail.com', 'ImunoDB');
-	        $this->email->$email;
+	        $this->email->to($email);
 	        $this->email->subject('Confirmação de cadastro - ImunoDB');
 	        $this->email->message('Olá, '.$nome.'!'.'<br><br>'.
 	                              'Desejamos boas vindas à Base de Dados Latino-Americana de Mutações Genéticas em Imunodeficiências Primárias!'."<br><br>".
@@ -38,7 +38,7 @@ class Mail extends CI_Controller {
 	        echo $nome."\n";
 	        echo $email."\n";
 	        echo $url."\n";
-	        exit;
+	        // exit;
     	    if ($this->email->send())
     	    	redirect("http://localhost/ImunoDB/users/confirm/".$msg."/1");
     	    else {
