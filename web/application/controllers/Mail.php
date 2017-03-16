@@ -38,13 +38,14 @@ class Mail extends CI_Controller {
 	        echo $nome."\n";
 	        echo $email."\n";
 	        echo $url."\n";
-	        exit;
-    	    if ($this->email->send())
+	        // exit;
+    	    if ($this->email->send(FALSE))
     	    	redirect("http://localhost/ImunoDB/users/confirm/".$msg."/1");
     	    else {
     	    	$msg = "ERRO - Email nao enviado";
-    	    	// echo "ERRO - Email nao enviado";
-    	    	redirect("http://localhost/ImunoDB/users/confirm/".$msg);
+    	    	echo "ERRO - Email nao enviado";
+    	    	$this->email->print_debugger();
+    	    	// redirect("http://localhost/ImunoDB/users/confirm/".$msg);
     	    }
 		}
 
