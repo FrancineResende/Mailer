@@ -10,10 +10,15 @@ class Mail extends CI_Controller {
 
 	}
 
-	public function index($nome="Fran", $email="Meu_email", $url="url"){
-		echo $nome;
-		echo $email;
-		echo $url;
+	public function index($nome="", $email="", $url=""){
+		$msg = "";
+		if ($nome=="" or $email=="" or $url==""){
+			echo "vazio";
+		}
+			// $msg = "Falhou"
+			// retorna enviando msg de erro;
+		// else
+			// envia email e retorna com msg de sucesso se conseguiu enviar
 		// $nome  = $this->encryption->decrypt($nome);
 		// $email = $this->encryption->decrypt($email);
 		// $url   = $this->encryption->decrypt($url);
