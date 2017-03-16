@@ -21,8 +21,9 @@ class Mail extends CI_Controller {
 		else {
 			$nome  = $this->encryption->decrypt($nome);
 			$email = $this->encryption->decrypt($email);
+			echo "url antes = ".$url."\n";
 			$url   = $this->encryption->decrypt($url);
-
+			echo "url depois = ".$url."\n";
 			$this->email->from('imunodb@gmail.com', 'ImunoDB');
 	        $this->email->reply_to('imunodb@gmail.com', 'ImunoDB');
 	        $this->email->to($email);
