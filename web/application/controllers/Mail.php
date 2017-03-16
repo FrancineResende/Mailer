@@ -35,6 +35,10 @@ class Mail extends CI_Controller {
 	                              // necessário arrumar texto da mensagem
 	                              // provavelmente mudar para tipo html
 
+	        echo $nome."\n";
+	        echo $email."\n";
+	        echo $url."\n";
+	        exit;
     	    if ($this->email->send())
     	    	redirect("http://localhost/ImunoDB/users/confirm/".$msg."/1");
     	    else {
