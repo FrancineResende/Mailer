@@ -29,7 +29,7 @@ class Mail extends CI_Controller {
 			
 			$nome     = $this->encryption->decrypt($nome);
 			$email    = $this->encryption->decrypt($email);
-			
+			echo "Email = ".$email."\n";
 			$this->email->from('imunodb@gmail.com', 'ImunoDB');
 	        $this->email->reply_to('imunodb@gmail.com', 'ImunoDB');
 	        $this->email->to($email);
@@ -41,7 +41,7 @@ class Mail extends CI_Controller {
 	                              'bye bye'.'<br>'); 
 	                              // necessário arrumar texto da mensagem
 	                              // provavelmente mudar para tipo html
-	        
+
 	        echo $nome."\n";
 	        echo $email."\n";
 	        echo $url."\n";
