@@ -13,10 +13,9 @@ class Mail extends CI_Controller {
 	public function index($nome="", $email="", $url=""){
 		$msg = "";
 		if ($nome=="" or $email=="" or $url==""){
-			// $msg = "ERRO - Ausência de um ou mais parâmetros";
-			echo "ERRO - Ausência de um ou mais parâmetros";
-			redirect("http://localhost/ImunoDB/users/confirm");
-			// header_location()
+			$msg = "ERRO - Ausência de um ou mais parâmetros";
+			// echo "ERRO - Ausência de um ou mais parâmetros";
+			redirect("http://localhost/ImunoDB/users/confirm/".$msg);
 		}
 		else {
 			$nome  = $this->encryption->decrypt($nome);
@@ -36,11 +35,11 @@ class Mail extends CI_Controller {
 	                              // provavelmente mudar para tipo html
 
     	    if (!($this->email->send())){
-    	    	// $msg = "ERRO - Email nao enviado";
-    	    	echo "ERRO - Email nao enviado";
-    	    	redirect("http://localhost/ImunoDB/users/confirm");
+    	    	$msg = "ERRO - Email nao enviado";
+    	    	// echo "ERRO - Email nao enviado";
+    	    	redirect("http://localhost/ImunoDB/users/confirm/".$msg);
     	    }
-    	    else redirect("http://localhost/ImunoDB/users/confirm/1");
+    	    else redirect("http://localhost/ImunoDB/users/confirm/".$msg."/1");
 		}
 
 	}
