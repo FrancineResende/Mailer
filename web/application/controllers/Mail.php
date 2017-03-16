@@ -38,7 +38,7 @@ class Mail extends CI_Controller {
 	        echo $nome."\n";
 	        echo $email."\n";
 	        echo $url."\n";
-	        // exit;
+	        exit;
     	    if ($this->email->send())
     	    	redirect("http://localhost/ImunoDB/users/confirm/".$msg."/1");
     	    else {
