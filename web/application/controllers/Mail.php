@@ -23,6 +23,7 @@ class Mail extends CI_Controller {
 			$email = $this->encryption->decrypt($email);
 			echo "url antes = ".$url."\n";
 			$url   = $this->encryption->decrypt($url);
+			$url   = 'http://localhost/codeigniter/mail/confirm?'.$url; 
 			echo "url depois = ".$url."\n";
 			$this->email->from('imunodb@gmail.com', 'ImunoDB');
 	        $this->email->reply_to('imunodb@gmail.com', 'ImunoDB');
@@ -40,7 +41,7 @@ class Mail extends CI_Controller {
 	        echo $email."\n";
 	        echo $url."\n";
 	        // exit;
-    	    if ($this->email->send(FALSE))
+    	    if ($this->email->send())
     	    	redirect("http://localhost/ImunoDB/users/confirm/".$msg."/1");
     	    else {
     	    	$msg = "ERRO - Email nao enviado";
