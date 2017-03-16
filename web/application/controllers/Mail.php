@@ -10,7 +10,7 @@ class Mail extends CI_Controller {
 
 	}
 
-	public index($nome, $email, $url){
+	public function index($nome, $email, $url){
 		$nome  = $this->encryption->decrypt($nome);
 		$email = $this->encryption->decrypt($email);
 		$url   = $this->encryption->decrypt($url);
