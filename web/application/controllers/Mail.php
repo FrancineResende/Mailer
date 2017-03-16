@@ -29,7 +29,7 @@ class Mail extends CI_Controller {
 			echo "Email que chega = ".$email."\n";
 			$nome     = $this->encryption->decrypt($nome);
 			$email    = $this->encryption->decrypt($email);
-			echo "Email = ".$email."\n";
+			echo "Email = ".$email."vazio\n";
 			$this->email->from('imunodb@gmail.com', 'ImunoDB');
 	        $this->email->reply_to('imunodb@gmail.com', 'ImunoDB');
 	        $this->email->to($email);
