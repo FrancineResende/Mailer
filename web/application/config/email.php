@@ -8,7 +8,7 @@ $config['smtp_user']    = 'imunodb@gmail.com';
 $config['smtp_pass']    = 'latamimunodb';
 $config['charset']    = 'utf-8';
 $config['newline']    = "\r\n";
-$config['mailtype'] = 'html'; // or text
+$config['mailtype'] = 'text';//html'; // or text
 $config['validate'] = TRUE; // bool whether to validate email or not
 
 ?>
