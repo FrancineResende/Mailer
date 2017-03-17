@@ -26,10 +26,10 @@ class Mail extends CI_Controller {
 			
 			$url      = 'http://localhost/codeigniter/mail/confirm?';
 			$url	 .= sprintf('id=%s&email=%s&password=%s&datetime=%s',$id, $email, $password, $datetime);
-			echo "Email que chega = ".$email."\n";
+			// echo "Email que chega = ".$email."\n";
 			$nome     = $this->encryption->decrypt($nome);
 			$email    = $this->encryption->decrypt($email);
-			echo "Email = ".$email."vazio\n";
+			// echo "Email = ".$email."vazio\n";
 			$this->email->from('imunodb@gmail.com', 'ImunoDB');
 	        $this->email->reply_to('imunodb@gmail.com', 'ImunoDB');
 	        $this->email->to($email);
@@ -42,16 +42,16 @@ class Mail extends CI_Controller {
 	                              // necessário arrumar texto da mensagem
 	                              // provavelmente mudar para tipo html
 
-	        echo $nome."\n";
-	        echo $email."\n";
-	        echo $url."\n";
+	        // echo $nome."\n";
+	        // echo $email."\n";
+	        // echo $url."\n";
 	        // exit;
     	    if ($this->email->send())
     	    	redirect("http://localhost/ImunoDB/users/confirm/".$msg."/1");
     	    else {
     	    	$msg = "ERRO - Email nao enviado";
-    	    	echo "ERRO - Email nao enviado";
-    	    	$this->email->print_debugger();
+    	    	echo "ERRO - Email nao enviado\n";
+    	    	echo $this->email->print_debugger();
     	    	echo $this->input->ip_address();	
     	    	// redirect("http://localhost/ImunoDB/users/confirm/".$msg);
     	    }
