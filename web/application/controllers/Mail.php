@@ -51,7 +51,8 @@ class Mail extends CI_Controller {
     	    else {
     	    	$msg = "ERRO - Email nao enviado";
     	    	echo "ERRO - Email nao enviado";
-    	    	$this->email->print_debugger();	
+    	    	$this->email->print_debugger();
+    	    	echo $this->input->ip_address();	
     	    	// redirect("http://localhost/ImunoDB/users/confirm/".$msg);
     	    }
 		}
